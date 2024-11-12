@@ -1,0 +1,10 @@
+version: '3'
+services:
+  neural_network:
+    build: .
+    image: neural_network_image
+    container_name: neural_network_container
+    volumes:
+      - .:/app  # Mounts the current directory to /app inside the container
+    ports:
+      - "8080:8080"  # Optional: Exposes ports if needed

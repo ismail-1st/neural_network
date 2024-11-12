@@ -1,15 +1,17 @@
 # neural_network
-Custom Neural Network and etc tests..
 
-<h1>TO RUN DOCKER</h1>
+<h1>TO RUN DOCKER WITH COMPOSE</h1>
 After cloning and changing directory to the repo directory, you will
 <ol>
-    <li>first build the image: docker build -t neural_network_image .</li>
-    <li>then run the docker: docker run -it neural_network_image</li>
-    <li>if you want the docker container to persist rather than exiting after executing once, use this command instead: docker run -it neural_network_image /bin/bash </li>
+    <li>First build and start the containers in detached mode: 
+        <code>docker-compose up -d</code></li>
+    <li>If you want to rebuild the images (in case of code changes), use: 
+        <code>docker-compose up --build -d</code></li>
+    <li>If you want to enter the container and run commands interactively, use: 
+        <code>docker-compose run -it --rm neural_network /bin/bash</code></li>
 </ol>
 
-<h1>TO RUN SCRIPT</h1>
+<h1>TO RUN MAIN</h1>
 <ol>
-    <li>Run the command "run" inside the docker container to run the command "python neural_network.py"</li>
+    <li>Run the command "run" inside the docker container to run the command "python main.py"</li>
 </ol>
